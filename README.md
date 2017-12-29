@@ -1,6 +1,8 @@
-# Neo-RPC-SharpClient *
+# Neo-RPC-SharpClient (not finished yet, still more tests to be added)*
 
-This project aims to be a full RPC client for the NEO network created in C# and inspired by [Nethereum](https://github.com/Nethereum/Nethereum). Was develop with decoupling in mind to make maintenance and new RPC methods implemented more quickly:
+This project aims to be a full RPC client for the NEO network created in C# and inspired by [Nethereum](https://github.com/Nethereum/Nethereum). You can use it support your mobile wallet, websites, neo blockchain data gathering, etc. 
+
+Was develop with decoupling in mind to make maintenance and new RPC methods implemented more quickly:
 
 * Client base - Neo.JsonRpc.Client project
 * RPC client implementation - Neo.JsonRpc.RpcClient project
