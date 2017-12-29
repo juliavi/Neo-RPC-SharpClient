@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo.JsonRpc.Client", "Neo.JsonRpc.Client\Neo.JsonRpc.Client.csproj", "{E9A7DEC0-E6CB-4660-94F9-A633426BFBA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo.RPC", "Neo.RPC\Neo.RPC.csproj", "{83B39A76-5C60-4903-9DEC-CC0DCF525B0B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo.JsonRpc.RpcClient", "Neo.JsonRpc.RpcClient\Neo.JsonRpc.RpcClient.csproj", "{757FDF90-54CD-40AE-91D6-F93E5FF096EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo.RPC.Tests", "Neo.RPC.Test\Neo.RPC.Tests.csproj", "{245C6D7C-8C74-4047-8730-702DF072889E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9A7DEC0-E6CB-4660-94F9-A633426BFBA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A7DEC0-E6CB-4660-94F9-A633426BFBA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A7DEC0-E6CB-4660-94F9-A633426BFBA5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E9A7DEC0-E6CB-4660-94F9-A633426BFBA5}.Debug|x86.Build.0 = Debug|Any CPU
+		{E9A7DEC0-E6CB-4660-94F9-A633426BFBA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A7DEC0-E6CB-4660-94F9-A633426BFBA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A7DEC0-E6CB-4660-94F9-A633426BFBA5}.Release|x86.ActiveCfg = Release|Any CPU
+		{E9A7DEC0-E6CB-4660-94F9-A633426BFBA5}.Release|x86.Build.0 = Release|Any CPU
+		{83B39A76-5C60-4903-9DEC-CC0DCF525B0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83B39A76-5C60-4903-9DEC-CC0DCF525B0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83B39A76-5C60-4903-9DEC-CC0DCF525B0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{83B39A76-5C60-4903-9DEC-CC0DCF525B0B}.Debug|x86.Build.0 = Debug|Any CPU
+		{83B39A76-5C60-4903-9DEC-CC0DCF525B0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83B39A76-5C60-4903-9DEC-CC0DCF525B0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83B39A76-5C60-4903-9DEC-CC0DCF525B0B}.Release|x86.ActiveCfg = Release|Any CPU
+		{83B39A76-5C60-4903-9DEC-CC0DCF525B0B}.Release|x86.Build.0 = Release|Any CPU
+		{757FDF90-54CD-40AE-91D6-F93E5FF096EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757FDF90-54CD-40AE-91D6-F93E5FF096EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757FDF90-54CD-40AE-91D6-F93E5FF096EF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{757FDF90-54CD-40AE-91D6-F93E5FF096EF}.Debug|x86.Build.0 = Debug|Any CPU
+		{757FDF90-54CD-40AE-91D6-F93E5FF096EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757FDF90-54CD-40AE-91D6-F93E5FF096EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757FDF90-54CD-40AE-91D6-F93E5FF096EF}.Release|x86.ActiveCfg = Release|Any CPU
+		{757FDF90-54CD-40AE-91D6-F93E5FF096EF}.Release|x86.Build.0 = Release|Any CPU
+		{245C6D7C-8C74-4047-8730-702DF072889E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245C6D7C-8C74-4047-8730-702DF072889E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245C6D7C-8C74-4047-8730-702DF072889E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{245C6D7C-8C74-4047-8730-702DF072889E}.Debug|x86.Build.0 = Debug|Any CPU
+		{245C6D7C-8C74-4047-8730-702DF072889E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245C6D7C-8C74-4047-8730-702DF072889E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{245C6D7C-8C74-4047-8730-702DF072889E}.Release|x86.ActiveCfg = Release|Any CPU
+		{245C6D7C-8C74-4047-8730-702DF072889E}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D2FE2C4-B5AD-4DF6-8649-54096A95E2AF}
+	EndGlobalSection
+EndGlobal
