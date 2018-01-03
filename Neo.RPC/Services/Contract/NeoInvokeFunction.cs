@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Neo.JsonRpc.Client;
 using Newtonsoft.Json;
 
 namespace Neo.RPC.Services.Contract
@@ -46,24 +47,10 @@ namespace Neo.RPC.Services.Contract
  ///     }
  /// }
  /// </Summary>   
-    public class NeoInvokeFunction
-    {
-        [JsonProperty("state")]
-        public string State { get; set; }
-
-        [JsonProperty("gas_consumed")]
-        public string GasConsumed { get; set; }
-
-        [JsonProperty("stack")]
-        public List<Stack> Stack { get; set; }
-    }
-
-    public class Stack
-    {
-        [JsonProperty("type")]
-        public string Type { get; set; }
-
-        [JsonProperty("value")]
-        public string Value { get; set; }
-    }
+	public class NeoInvokeFunction : RpcRequestResponseHandler<DTOs.Invoke>
+	{
+		public NeoInvokeFunction(IClient client) : base(client, ApiMethods.invokefunction.ToString())
+		{
+		}
+	}
 }
