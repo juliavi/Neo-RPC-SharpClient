@@ -24,7 +24,7 @@ namespace Neo.JsonRpc.Client
 
         protected override async Task<T> SendInnerRequestAync<T>(RpcRequest request, string route = null)
         {
-            var response =
+			var response =
                 await _innerRpcClient.SendRequestAsync(
                         new EdjCase.JsonRpc.Core.RpcRequest(request.Id, request.Method,
                              request.RawParameters), route)
