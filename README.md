@@ -11,6 +11,8 @@ Was develop with decoupling in mind to make maintenance and new RPC methods impl
 
 (* simple readme just to submit to CoZ repo)
 
+The objective is to create a nuget package (after all tested and approved) for easy integration in every C# project. 
+
 
 ## Contributing
 
