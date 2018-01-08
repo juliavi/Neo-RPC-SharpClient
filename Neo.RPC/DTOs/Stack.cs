@@ -8,6 +8,6 @@ namespace Neo.RPC.DTOs
 		public string Type { get; set; }
 
 		[JsonProperty("value")]
-		public string Value { get; set; }
+		public object Value { get; set; }
 	}
 }
