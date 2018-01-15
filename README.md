@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  Still on testing phase, do not use it on the MainNet!
+  <b>Still on testing phase, do not use it on the MainNet!</b>
 </p>
 
 
