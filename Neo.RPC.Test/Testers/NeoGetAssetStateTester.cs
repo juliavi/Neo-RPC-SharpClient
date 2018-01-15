@@ -2,24 +2,24 @@
 using System.Threading.Tasks;
 using Neo.JsonRpc.Client;
 using Neo.RPC.DTOs;
-using Neo.RPC.Services.Account;
+using Neo.RPC.Services.Asset;
 using Xunit;
 
 namespace Neo.RPC.Tests.Testers
 {
-    public class NeoGetAccountStateTester : RpcRequestTester<AccountState>
+    public class NeoGetAssetStateTester : RpcRequestTester<AssetState>
     {
         [Fact]
-        public async void ShouldReturnAccountState()
+        public async void ShouldReturnAssetState()
         {
             var result = await ExecuteAsync();
             Assert.NotNull(result);
         }
 
-        public override async Task<AccountState> ExecuteAsync(IClient client)
+        public override async Task<AssetState> ExecuteAsync(IClient client)
         {
-            var accountState = new NeoGetAccountState(client);
-            return await accountState.SendRequestAsync(Settings.GetDefaultAccount());
+            var assetState = new NeoGetAssetState(client);
+            return await assetState.SendRequestAsync(Settings.GetGoverningAssetHash());
         }
 
         public override Type GetRequestType()

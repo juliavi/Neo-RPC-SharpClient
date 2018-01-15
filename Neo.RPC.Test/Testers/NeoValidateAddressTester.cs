@@ -21,7 +21,7 @@ namespace Neo.RPC.Tests.Testers
         [Fact]
         public async void ShouldReturnInvalid()
         {
-            var validateAddress = new NeoValidateAddress(this.Client);
+            var validateAddress = new NeoValidateAddress(Client);
             var invalidAddress = await validateAddress.SendRequestAsync(InvalidAddress);
             Assert.False(invalidAddress != null && invalidAddress.IsValid);
         }
