@@ -29,7 +29,7 @@ This project aims to be a full RPC client for the NEO network created in C# and 
 - After proper testing, will create a Nuget package for easy C# projects integration
 
 
-Was develop with decoupling in mind to make maintenance and new RPC methods implemented more quickly:
+Develop with decoupling in mind to make maintenance and new RPC methods implemented more quickly:
 
 * Client base - Neo.JsonRpc.Client project
 * RPC client implementation - Neo.JsonRpc.RpcClient project
