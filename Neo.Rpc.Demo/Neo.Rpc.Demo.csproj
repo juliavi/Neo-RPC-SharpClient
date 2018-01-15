@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Neo.JsonRpc.RpcClient\Neo.JsonRpc.RpcClient.csproj" />
+    <ProjectReference Include="..\Neo.RPC\Neo.RPC.csproj" />
+  </ItemGroup>
+
+</Project>
