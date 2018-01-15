@@ -10,6 +10,11 @@
   Modular RPC client for C# <b>NEO</b> blockchain.
 </p>
 
+<p align="center">
+  Still on testing phase, do not use it on the MainNet!
+</p>
+
+
 </p>
 
 
