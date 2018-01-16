@@ -54,7 +54,7 @@ namespace Neo.RPC.Services.Node
     ///      }
     /// }
     /// </Summary>
-    public class NeoGetPeers : GenericRpcRequestResponseHandlerNoParam<string> //todo dto
+    public class NeoGetPeers : GenericRpcRequestResponseHandlerNoParam<DTOs.Peers>
     {
         public NeoGetPeers(IClient client) : base(client, ApiMethods.getpeers.ToString())
         {
