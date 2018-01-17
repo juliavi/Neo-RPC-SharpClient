@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Neo.JsonRpc.Client;
+﻿using Neo.JsonRpc.Client;
 using Neo.RPC.Infrastructure;
 
 namespace Neo.RPC.Services.Node
@@ -31,7 +28,7 @@ namespace Neo.RPC.Services.Node
     ///         }
     ///     }
     /// </Summary>
-    public class NeoGetVersion : GenericRpcRequestResponseHandlerNoParam<string> //todo dto
+    public class NeoGetVersion : GenericRpcRequestResponseHandlerNoParam<DTOs.Version> //todo dto
     {
         public NeoGetVersion(IClient client) : base(client, ApiMethods.getversion.ToString())
         {

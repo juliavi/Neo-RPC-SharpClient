@@ -31,13 +31,13 @@ namespace Neo.RPC.Services.Transactions
     ///         }
     ///     }
     /// </Summary>
-    public class NeoGetTransactionOutput : RpcRequestResponseHandler<string> //todo DTO
+    public class NeoGetTransactionOutput : RpcRequestResponseHandler<DTOs.TransactionOutput> //todo DTO
     {
         public NeoGetTransactionOutput(IClient client) : base(client, ApiMethods.gettxout.ToString())
         {
         }
 
-        public Task<string> SendRequestAsync(string txId, int index = 0, object id = null)
+        public Task<DTOs.TransactionOutput> SendRequestAsync(string txId, int index = 0, object id = null)
         {
             if (txId == null) throw new ArgumentNullException(nameof(txId));
             if (index < 0) throw new ArgumentOutOfRangeException(nameof(index));
