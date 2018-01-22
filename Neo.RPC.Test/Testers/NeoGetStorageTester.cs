@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Neo.JsonRpc.Client;
-using Neo.RPC.Services.Storage;
+using Neo.RPC.Services.Contract;
 using Xunit;
 
 namespace Neo.RPC.Tests.Testers

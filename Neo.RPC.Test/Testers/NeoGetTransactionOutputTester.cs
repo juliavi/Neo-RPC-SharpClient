@@ -8,23 +8,24 @@ using Xunit;
 namespace Neo.RPC.Tests.Testers
 {
     public class NeoGetTransactionOutputTester : RpcRequestTester<TransactionOutput>
-	{
-		[Fact]
-		public async void ShouldReturnRawTransaction()
-		{
-			var result = await ExecuteAsync();
-			Assert.NotNull(result);
-		}
+    {
+        [Fact]
+        public async void ShouldReturnTransactionOutput()
+        {
+            var result = await ExecuteAsync();
+            Assert.NotNull(result);
+        }
 
-		public override async Task<TransactionOutput> ExecuteAsync(IClient client)
-		{
-			var transactionOutput = new NeoGetTransactionOutput(client);
-			return await transactionOutput.SendRequestAsync("902bdc8ffaf5f4d7d89d344160d444c1e378e22b6924d18c11131afd1d3312a1"); // todo move to settings
-		}
+        public override async Task<TransactionOutput> ExecuteAsync(IClient client)
+        {
+            var transactionOutput = new NeoGetTransactionOutput(client);
+            return await transactionOutput.SendRequestAsync(
+                "5175ae08bc12988cb55c7ec5978245763d946658383b2ff51899ac244c894f32"); // todo move to settings
+        }
 
-		public override Type GetRequestType()
-		{
-			return typeof(TransactionOutput);
-		}
-	}
+        public override Type GetRequestType()
+        {
+            return typeof(TransactionOutput);
+        }
+    }
 }

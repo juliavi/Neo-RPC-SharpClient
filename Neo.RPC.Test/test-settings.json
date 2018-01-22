@@ -1,6 +1,6 @@
 ﻿{
   "mainNetSettings": {
-    "rpcUrl": "http://api.otcgo.cn:10332",
+    "rpcUrl": "http://seed4.neo.org:10332",
     "defaultAccount": "ASJiT56jYKZgTN9FtGvjRenbdBKTZ98QVw",
     "debugLogLocation": "C:\\Users\\bruno\\Documents\\Source\\Repos\\NeoDraftRpc\\log.txt",
     "blockhash": "a58942fc476facd7f9071cae17af511fee974566347da6df621b3708e3fc64f7",
@@ -15,11 +15,11 @@
   },
 
   "testNetSettings": {
-    "rpcUrl": "http://seed2.cityofzion.io:8080",
+    "rpcUrl": "http://seed5.neo.org:20332",
     "defaultAccount": "ASJiT56jYKZgTN9FtGvjRenbdBKTZ98QVw",
     "debugLogLocation": "C:\\Users\\bruno\\Documents\\Source\\Repos\\NeoDraftRpc\\log.txt",
     "blockhash": "b9cbaccefd80b08576e06e76122294b71bad73098d49233164b610a323119e82",
-    "blockNumber": "0",
+    "blockNumber": "23131",
     "contractHash": "a2df2e12d76bcf4580ca3178d3790b697eece053",
     "contractTransaction": "aeefafca2b27bbec34a698c4ef498993e923bba1d12eb5a9adad50900a7a3f03",
     "minerTransaction": "ed0ebd8c10264ac2ed128146b21c382ffb565ec7a4e2d70c605d809f4e371950",

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Neo.JsonRpc.Client;
 
-namespace Neo.RPC.Services.Storage
+namespace Neo.RPC.Services.Contract
 {
     /// <Summary>
     ///     getstorage   

@@ -1,5 +1,5 @@
 ﻿using Neo.JsonRpc.Client;
-using Neo.RPC.Services.Storage;
+using Neo.RPC.Services.Contract;
 
 namespace Neo.RPC.Services
 {
