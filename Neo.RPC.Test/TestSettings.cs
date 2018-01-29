@@ -13,7 +13,6 @@ namespace Neo.RPC.Tests
             Configuration = builder.Build();
         }
 
-        public static string ParitySettings = "parityRopstenSettings";
         public static string TestNetSettings = "mainNetSettings";
 
         public string CurrentSettings = TestSettings.TestNetSettings;
