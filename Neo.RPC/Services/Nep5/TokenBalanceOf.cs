@@ -11,7 +11,6 @@ namespace Neo.RPC.Services.Nep5
 
 		public TokenBalanceOf(IClient client, string tokenScriptHash) : base(client, ApiMethods.invokefunction.ToString())
 		{
-			if (string.IsNullOrEmpty(tokenScriptHash)) throw new ArgumentNullException(nameof(tokenScriptHash));
 			_tokenScriptHash = tokenScriptHash;
 		}
 
@@ -24,13 +23,15 @@ namespace Neo.RPC.Services.Nep5
 		public RpcRequest BuildRequest(string account, object id = null)
 		{
 			if (string.IsNullOrEmpty(account)) throw new ArgumentNullException(nameof(account));
-			var param = new List<DTOs.Stack>();
-			param.Add(new DTOs.Stack
-			{
-				Type = "Hash160",
-				Value = account
-			});
-			return base.BuildRequest(id, _tokenScriptHash, Nep5Methods.balanceOf.ToString(), param);
+            var param = new List<DTOs.Stack>
+            {
+                new DTOs.Stack
+                {
+                    Type = "Hash160",
+                    Value = account
+                }
+            };
+            return base.BuildRequest(id, _tokenScriptHash, Nep5Methods.balanceOf.ToString(), param);
 		}
 	}
 }

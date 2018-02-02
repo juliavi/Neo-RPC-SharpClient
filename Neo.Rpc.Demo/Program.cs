@@ -23,9 +23,13 @@ namespace Neo.Rpc.Demo
         public static async Task InvokeScript()
         {
             var client = new RpcClient(new Uri("http://seed5.neo.org:10332"));
-            var scriptHash = "b951ecbbc5fe37a9c280a76cb0ce0014827294cf";
+            var scriptHash = "08e8c4400f1af2c20c28e0018f29535eb85d15b6"; //TNC
             var nep5Service = new NeoNep5Service(client, scriptHash);
-            var result = await nep5Service.GetNep5Name();
+            var name = await nep5Service.GetName();
+            var decimals = await nep5Service.GetDecimals();
+            var totalsupply = await nep5Service.GetTotalSupply(decimals);
+            var symbol = await nep5Service.GetSymbol();
+            var ea = "";
         }
     }
 }

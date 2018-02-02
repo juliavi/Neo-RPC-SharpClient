@@ -14,8 +14,8 @@ namespace Neo.RPC.Helpers
 	{
 		public static byte[] HexToBytes(this string value)
 		{
-			if (string.IsNullOrEmpty(value))
-				return new byte[0];
+		    if (value == null || value.Length == 0)
+                return new byte[0];
 			if (value.Length % 2 == 1)
 				throw new FormatException();
 			byte[] result = new byte[value.Length / 2];

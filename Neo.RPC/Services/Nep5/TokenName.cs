@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Neo.JsonRpc.Client;
 
 namespace Neo.RPC.Services.Nep5
@@ -10,7 +9,6 @@ namespace Neo.RPC.Services.Nep5
 
         public TokenName(IClient client, string tokenScriptHash) : base(client, ApiMethods.invokefunction.ToString())
         {
-            if (string.IsNullOrEmpty(tokenScriptHash)) throw new ArgumentNullException(nameof(tokenScriptHash));
 			_tokenScriptHash = tokenScriptHash;
         }
 
