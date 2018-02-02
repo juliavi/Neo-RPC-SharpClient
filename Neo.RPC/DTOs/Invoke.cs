@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Neo.RPC.Infrastructure;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace Neo.RPC.DTOs

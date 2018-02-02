@@ -15,7 +15,6 @@ namespace Neo.RPC
             Contracts = new NeoApiContractService(client);
             Nodes = new NeoApiNodeService(client);
             Transactions = new NeoApiTransactionService(client);
-            Storages = new NeoApiStorageService(client);
         }
 
         public NeoApiAccountService Accounts { get; private set; }
@@ -23,7 +22,6 @@ namespace Neo.RPC
         public NeoApiBlockService Blocks { get; private set; }
         public NeoApiContractService Contracts { get; private set; }
         public NeoApiNodeService Nodes { get; private set; }
-        public NeoApiStorageService Storages { get; private set; }
         public NeoApiTransactionService Transactions { get; private set; }
     }
 }
