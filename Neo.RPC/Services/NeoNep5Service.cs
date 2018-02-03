@@ -16,6 +16,7 @@ namespace Neo.RPC.Services
             if (client == null) throw new ArgumentNullException(nameof(client));
             if (string.IsNullOrEmpty(tokenScriptHash)) throw new ArgumentNullException(nameof(tokenScriptHash));
 
+            GetTokenBalance = new TokenBalanceOf(client, tokenScriptHash);
             GetTokenDecimals = new TokenDecimals(client, tokenScriptHash);
             GetTokenName = new TokenName(client, tokenScriptHash);
             GetTokenTotalSupply = new TokenTotalSupply(client, tokenScriptHash);
@@ -74,10 +75,47 @@ namespace Neo.RPC.Services
             return decimals;
         }
 
+        public async Task<string> GetBalance(string scriptHash, string decimals)
+        {
+            string balance = string.Empty;
+
+            var result = await GetTokenBalance.SendRequestAsync(scriptHash);
+            if (result != null)
+            {
+                balance = result.Stack[0].Value.ToString();
+                var supplyValueArray = balance.HexToBytes().Reverse().ToArray(); // todo, add explanation for this
+                balance = BitConverter.ToString(supplyValueArray).Replace("-", "");
+                balance = GetDecimal(HexToBigInteger(balance), (int)DecimalStringToBigInteger(decimals));              
+            }
+            return balance;
+        }
+
+        private TokenBalanceOf GetTokenBalance { get; }
         private TokenDecimals GetTokenDecimals { get; }
         private TokenName GetTokenName { get; }
         private TokenTotalSupply GetTokenTotalSupply { get; }
         private TokenSymbol GetTokenSymbol { get; }
+
+
+        private string GetDecimal(BigInteger bigInteger, int divisor)
+        {
+            var quotient = BigInteger.DivRem(bigInteger, divisor, out var remainder);
+
+            const int decimalPlaces = 2;
+            var decimalPart = BigInteger.Zero;
+            for (int i = 0; i < decimalPlaces; i++)
+            {
+                var div = (remainder * 10) / divisor;
+
+                decimalPart *= 10;
+                decimalPart += div;
+
+                remainder = remainder * 10 - div * divisor;
+            }
+
+            var retValue = quotient.ToString() + "." + decimalPart.ToString(new string('0', decimalPlaces));
+            return retValue;
+        }
 
         private static BigInteger HexToBigInteger(string hexNumber)
         {
