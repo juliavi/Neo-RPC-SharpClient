@@ -20,7 +20,7 @@ namespace Neo.RPC.Tests.Testers
         {
             var transactionOutput = new NeoGetTransactionOutput(client);
             return await transactionOutput.SendRequestAsync(
-                "5175ae08bc12988cb55c7ec5978245763d946658383b2ff51899ac244c894f32"); // todo move to settings
+                "f4250dab094c38d8265acc15c366dc508d2e14bf5699e12d9df26577ed74d657"); // todo move to settings
         }
 
         public override Type GetRequestType()

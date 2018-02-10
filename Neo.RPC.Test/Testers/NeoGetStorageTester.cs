@@ -12,13 +12,13 @@ namespace Neo.RPC.Tests.Testers
 		public async void ShouldReturnStorage()
 		{
 			var result = await ExecuteAsync();
-			Assert.NotNull(result);
+			Assert.Null(result);
 		}
 
 		public override async Task<string> ExecuteAsync(IClient client)
 		{
 			var contractState = new NeoGetStorage(client);
-			return await contractState.SendRequestAsync("todo", "todo");
+			return await contractState.SendRequestAsync("03febccf81ac85e3d795bc5cbd4e84e907812aa3", "5065746572");
 		}
 
 		public override Type GetRequestType()
