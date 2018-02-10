@@ -17,6 +17,8 @@
 
 </p>
 
+## Update
+This project is now available as a nuget [package](https://www.nuget.org/packages/Neo.RPC)!
 
 ## Overview
 
