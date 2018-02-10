@@ -37,6 +37,7 @@ Develop with decoupling in mind to make maintenance and new RPC methods implemen
 * RPC client implementation - Neo.JsonRpc.RpcClient project
 * DTO'S, Services, Helpers - Neo.RPC (main project)
 * Tests - Neo.RPC.Tests
+* Demo - Simple demonstration project
 
 ## Quick Start
 
