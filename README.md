@@ -17,6 +17,9 @@
 
 </p>
 
+## Update 2!!
+Something happen when uploading the package. It does not identify Neo.JsonRpc.RpcClient as a dependency of the project. So you have to install the Neo.RPC and Neo.JsonRpc.RpcClient packages until I fix this!
+
 ## Update
 This project is now available as a nuget [package](https://www.nuget.org/packages/Neo.RPC)!
 
