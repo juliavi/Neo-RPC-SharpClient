@@ -59,14 +59,12 @@ namespace Neo.RPC.Services.Contract
 		public Task<DTOs.Invoke> SendRequestAsync(string scriptHash, List<DTOs.InvokeParameter> parameters, object id = null)
 		{
 			if (string.IsNullOrEmpty(scriptHash)) throw new ArgumentNullException(nameof(scriptHash));
-
 			return base.SendRequestAsync(id, scriptHash, parameters);
 		}
 
-		public RpcRequest BuildRequest(string scriptHash, string operation, List<DTOs.InvokeParameter> parameters, object id = null)
+		public RpcRequest BuildRequest(string scriptHash, List<DTOs.InvokeParameter> parameters, object id = null)
 		{
 			if (string.IsNullOrEmpty(scriptHash)) throw new ArgumentNullException(nameof(scriptHash));
-			if (string.IsNullOrEmpty(operation)) throw new ArgumentNullException(nameof(operation));
 
 			return base.BuildRequest(id, scriptHash, parameters);
 		}

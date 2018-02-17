@@ -1,5 +1,4 @@
-﻿using System;
-using Neo.JsonRpc.Client;
+﻿using Neo.JsonRpc.Client;
 using Neo.RPC.Services.Block;
 
 namespace Neo.RPC.Services
@@ -11,6 +10,7 @@ namespace Neo.RPC.Services
         public NeoGetBlock GetBlock { get; private set; }
         public NeoGetBlockCount GetBlockCount { get; private set; }
         public NeoGetBlockSerialized GetBlockSerialized { get; private set; }
+        public NeoGetBlockSysFee GetBlockSysFee { get; private set; }
 
         public NeoApiBlockService(IClient client) : base(client)
         {           
@@ -19,8 +19,7 @@ namespace Neo.RPC.Services
             GetBlockSerialized = new NeoGetBlockSerialized(client);
             GetBlockCount = new NeoGetBlockCount(client);
             GetBlockHash = new NeoGetBlockHash(client);
+            GetBlockSysFee = new NeoGetBlockSysFee(client);
         }
-
-
     }
 }
