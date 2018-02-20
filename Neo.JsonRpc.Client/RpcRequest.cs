@@ -1,4 +1,4 @@
-﻿namespace Neo.JsonRpc.Client
+﻿    namespace Neo.JsonRpc.Client
 {
     public class RpcRequest
     {

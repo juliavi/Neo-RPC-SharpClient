@@ -47,8 +47,7 @@ namespace Neo.JsonRpc.Client
             var result = _memberInfo.GetValue(target);
             if (_memberInfo.Name == "RawParameters")
             {
-                var array = result as object[];
-                if (array != null && array.Length == 1 && array[0] == null)
+                if (result is object[] array && array.Length == 1 && array[0] == null)
                     result = "[]";
             }
             return result;
