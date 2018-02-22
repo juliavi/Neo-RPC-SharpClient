@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo.JsonRpc.RpcClient", "Ne
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo.RPC.Tests", "Neo.RPC.Test\Neo.RPC.Tests.csproj", "{245C6D7C-8C74-4047-8730-702DF072889E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neo.Rpc.Demo", "Neo.Rpc.Demo\Neo.Rpc.Demo.csproj", "{FBF589FA-E10F-498A-8127-D135AB40224A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo.Rpc.Demo", "Neo.Rpc.Demo\Neo.Rpc.Demo.csproj", "{FBF589FA-E10F-498A-8127-D135AB40224A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neo.Base", "Neo.Hex\Neo.Base.csproj", "{D1CEC403-B985-4B0E-835C-47C023539795}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,14 @@ Global
 		{FBF589FA-E10F-498A-8127-D135AB40224A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FBF589FA-E10F-498A-8127-D135AB40224A}.Release|x86.ActiveCfg = Release|Any CPU
 		{FBF589FA-E10F-498A-8127-D135AB40224A}.Release|x86.Build.0 = Release|Any CPU
+		{D1CEC403-B985-4B0E-835C-47C023539795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1CEC403-B985-4B0E-835C-47C023539795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1CEC403-B985-4B0E-835C-47C023539795}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D1CEC403-B985-4B0E-835C-47C023539795}.Debug|x86.Build.0 = Debug|Any CPU
+		{D1CEC403-B985-4B0E-835C-47C023539795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1CEC403-B985-4B0E-835C-47C023539795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1CEC403-B985-4B0E-835C-47C023539795}.Release|x86.ActiveCfg = Release|Any CPU
+		{D1CEC403-B985-4B0E-835C-47C023539795}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
