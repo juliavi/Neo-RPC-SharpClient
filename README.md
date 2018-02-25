@@ -13,23 +13,25 @@
 <p align="center">
   <b>Still on testing phase, do not use it on the MainNet!</b>
 </p>
-
-
+<p align="center">
+<a href="https://www.nuget.org/packages/Neo.RPC/">
+    <img src="https://img.shields.io/badge/nuget-1.0.1-green.svg"></a>
 </p>
 
-## Update
-This project is now available as a nuget [package](https://www.nuget.org/packages/Neo.RPC)!
 
-## Overview
+## Update (25-02-2018)
+This project will be rename to **neo-modules** and it will host small different packages to help C# devs to start working on Neo. It follows a similar struture as [Nethereum](https://github.com/Nethereum/Nethereum) to ease the migration of Ethereum devs to Neo. This will include: 
+  * base types used on neo-project;
+  * hex and string operations;
+  * KeyPair generation encryption /decryption, NEP6 implementation
+  * Signing of transactions and other more top level operations (to be decided)
+  * ABI
 
-This project aims to be a full RPC client for the NEO network created in C# and inspired by [Nethereum](https://github.com/Nethereum/Nethereum). You can use it support your mobile wallet, websites, neo blockchain data gathering, etc. 
+Each of these will get is own nuget package.  
+  
 
-### What does it currently do
-- RPC Client
 
-### What will it do
-- After proper testing, will create a Nuget package for easy C# projects integration
-
+## RPC client - Intro and Quick Start (Status - finished)
 
 Develop with decoupling in mind to make maintenance and new RPC methods implemented more quickly:
 
@@ -38,8 +40,6 @@ Develop with decoupling in mind to make maintenance and new RPC methods implemen
 * DTO'S, Services, Helpers - Neo.RPC (main project)
 * Tests - Neo.RPC.Tests
 * Demo - Simple demonstration project
-
-## Quick Start
 
 Setup the rpc client node
 
@@ -100,6 +100,7 @@ Balance: 1457.82
 ## Authors
 
 * **Bruno Freitas** - [BrunoFreitasgit](https://github.com/BrunoFreitasgit)
+* Some base code comes from [Nethereum](https://github.com/Nethereum/Nethereum)
 
 ## License
 

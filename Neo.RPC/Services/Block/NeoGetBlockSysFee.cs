@@ -33,7 +33,7 @@ namespace Neo.RPC.Services.Block
 
         public Task<string> SendRequestAsync(int blockIndex, object id = null)
         {
-            if (blockIndex <= 0) throw new ArgumentOutOfRangeException(nameof(blockIndex));
+            if (blockIndex < 0) throw new ArgumentOutOfRangeException(nameof(blockIndex));
             return base.SendRequestAsync(id, blockIndex);
         }
 

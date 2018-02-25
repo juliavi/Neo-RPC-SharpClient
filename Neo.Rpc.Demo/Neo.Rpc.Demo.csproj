@@ -6,8 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Neo.JsonRpc.RpcClient\Neo.JsonRpc.RpcClient.csproj" />
-    <ProjectReference Include="..\Neo.RPC\Neo.RPC.csproj" />
+    <PackageReference Include="Neo.RPC" Version="1.0.1" />
   </ItemGroup>
 
 </Project>
