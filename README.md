@@ -14,7 +14,7 @@
   <b>Still on testing phase, do not use it on the MainNet!</b>
 </p>
 <p align="center">
-   Rpc client : <a href="https://www.nuget.org/packages/Neo.RPC/">
+<a href="https://www.nuget.org/packages/Neo.RPC/">
     <img src="https://img.shields.io/badge/nuget-1.0.1-green.svg"></a>
 </p>
 
