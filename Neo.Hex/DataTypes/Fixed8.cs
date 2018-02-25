@@ -9,6 +9,7 @@ namespace Neo.Base.DataTypes
     ///     Accurate to 10 ^ -8 64-bit fixed point, the rounding error can be minimised to a minimum.
     ///     The rounding error can be completely eliminated by controlling the accuracy of the multiplier.
     /// </summary>
+    /// <note>Taken from neo-project</note>
     public struct Fixed8 : IComparable<Fixed8>, IEquatable<Fixed8>, IFormattable, ISerializable
     {
         private const long D = 100000000;

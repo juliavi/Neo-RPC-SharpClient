@@ -5,6 +5,7 @@ using Neo.Base.Interfaces;
 
 namespace Neo.Base.DataTypes
 {
+    ///<note>Taken from neo-project</note>
     public abstract class UIntBase : IEquatable<UIntBase>, ISerializable
     {
         private readonly byte[] data_bytes;

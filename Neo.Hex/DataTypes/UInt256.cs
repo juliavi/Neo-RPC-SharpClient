@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace Neo.Base.DataTypes
 {
+    ///<note>Taken from neo-project</note>
     public class UInt256 : UIntBase, IComparable<UInt256>, IEquatable<UInt256>
     {
         public static readonly UInt256 Zero = new UInt256();

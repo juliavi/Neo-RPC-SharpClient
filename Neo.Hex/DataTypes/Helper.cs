@@ -9,6 +9,7 @@ using System.Text;
 
 namespace Neo.Base.DataTypes
 {
+    ///<note>Taken from neo-project</note>
     public static class Helper
     {
         private static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);

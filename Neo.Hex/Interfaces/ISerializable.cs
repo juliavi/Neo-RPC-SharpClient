@@ -3,23 +3,23 @@
 namespace Neo.Base.Interfaces
 {
     /// <summary>
-    /// <note>Taken from </note>
-    /// 为序列化提供一个接口
+    /// Provide an interface for serialization
     /// </summary>
+    /// <note>Taken from neo-project</note>
     public interface ISerializable
     {
         int Size { get; }
 
         /// <summary>
-        /// 序列化
+        /// Serialization
         /// </summary>
-        /// <param name="writer">存放序列化后的结果</param>
+        /// <param name="writer">Stored serialized results</param>
         void Serialize(BinaryWriter writer);
 
         /// <summary>
-        /// 反序列化
+        /// Deserialization
         /// </summary>
-        /// <param name="reader">数据来源</param>
+        /// <param name="reader">Data Source</param>
         void Deserialize(BinaryReader reader);
     }
 }

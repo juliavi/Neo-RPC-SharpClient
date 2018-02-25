@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace Neo.Base.DataTypes
 {
+    ///<note>Taken from neo-project</note>
     public class UInt160 : UIntBase, IComparable<UInt160>, IEquatable<UInt160>
     {
         public static readonly UInt160 Zero = new UInt160();
