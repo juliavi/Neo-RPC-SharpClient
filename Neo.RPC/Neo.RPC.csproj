@@ -13,8 +13,8 @@
     <RepositoryUrl>https://github.com/CityOfZion/Neo-RPC-SharpClient/</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright>MIT</Copyright>
-    <PackageReleaseNotes>Initial version</PackageReleaseNotes>
-    <Version>1.0.1</Version>
+    <PackageReleaseNotes>Removed EdjCase.JsonRpc.Client from dependencies</PackageReleaseNotes>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>

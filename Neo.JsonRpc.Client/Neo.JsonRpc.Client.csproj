@@ -10,10 +10,11 @@
     <RepositoryUrl>https://github.com/CityOfZion/Neo-RPC-SharpClient/</RepositoryUrl>
     <PackageTags>Neo JsonRpc RpcClient CityofZion Blockchain</PackageTags>
     <Copyright>MIT</Copyright>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <PackageReleaseNotes>Initial version</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Removed EdjCase.JsonRpc.Client from dependencies</PackageReleaseNotes>
     <Authors>Bruno Freitas</Authors>
     <Company>Bruno Freitas</Company>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
