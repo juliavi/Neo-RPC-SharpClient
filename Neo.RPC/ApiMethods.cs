@@ -4,7 +4,7 @@
 	{
 		getaccountstate,
 		getassetstate,
-		//getbalance,
+		getbalance,
 		getbestblockhash,
 		getblock,
 		getblockcount,
@@ -23,7 +23,8 @@
 		sendrawtransaction,
 		sendtoaddress,
 		sendmany,
-		//getnewaddress,
+		getnewaddress,
+        listaddress,
 		//dumpprivkey,
 		validateaddress,
 		getpeers,
