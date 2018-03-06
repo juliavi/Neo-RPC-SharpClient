@@ -10,11 +10,12 @@ namespace Neo.RPC.Services
             GetRawTransaction = new NeoGetRawTransaction(client);
             SendRawTransaction = new NeoSendRawTransaction(client);
             GetTransactionOutput = new NeoGetTransactionOutput(client);
+            SendAssets = new NeoSendAssets(client);
         }
 
         public NeoGetRawTransaction GetRawTransaction { get; private set; }
         public NeoSendRawTransaction SendRawTransaction { get; private set; }
         public NeoGetTransactionOutput GetTransactionOutput { get; private set; }
-       
+        public NeoSendAssets SendAssets{ get; private set; }
     }
 }
