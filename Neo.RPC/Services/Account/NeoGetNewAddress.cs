@@ -34,10 +34,5 @@ namespace Neo.RPC.Services.Account
         {
             return base.SendRequestAsync(id);
         }
-
-        public RpcRequest BuildRequest(object id = null)
-        {
-            return base.BuildRequest(id);
-        }
     }
 }

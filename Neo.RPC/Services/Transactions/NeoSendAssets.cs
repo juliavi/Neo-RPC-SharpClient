@@ -78,14 +78,17 @@ namespace Neo.RPC.Services
         {
             if (string.IsNullOrEmpty(assetId)) throw new ArgumentNullException(nameof(address));
             if (string.IsNullOrEmpty(address)) throw new ArgumentNullException(nameof(address));
-            if (amount == 0) throw new ArgumentNullException(nameof(amount));
+            if (amount <= 0) throw new ArgumentException("Amount must be greater than 0", nameof(amount));
 
             return base.SendRequestAsync(id, assetId, address, amount);
         }
 
-        public RpcRequest BuildRequest(object id = null)
+        public RpcRequest BuildRequest(string assetId, string address, int amount, object id = null)
         {
-            return base.BuildRequest(id);
+            if (string.IsNullOrEmpty(assetId)) throw new ArgumentNullException(nameof(address));
+            if (string.IsNullOrEmpty(address)) throw new ArgumentNullException(nameof(address));
+            if (amount <= 0) throw new ArgumentException("Amount must be greater than 0", nameof(amount));
+            return base.BuildRequest(id, assetId, address, amount);
         }
     }
 }

@@ -48,10 +48,10 @@ namespace Neo.RPC.Services.Account
             return base.SendRequestAsync(id, assetId);
         }
 
-        public RpcRequest BuildRequest(string signedTransactionData, object id = null)
+        public RpcRequest BuildRequest(string assetId, object id = null)
         {
-            if (signedTransactionData == null) throw new ArgumentNullException(nameof(signedTransactionData));
-            return base.BuildRequest(id, signedTransactionData);
+            if (assetId == null) throw new ArgumentNullException(nameof(assetId));
+            return base.BuildRequest(id, assetId);
         }
     }
 }
