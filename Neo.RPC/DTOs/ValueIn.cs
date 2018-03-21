@@ -8,6 +8,6 @@ namespace Neo.RPC.DTOs
         public string TransactionId { get; set; }
 
         [JsonProperty("vout")]
-        public int Vout { get; set; }
+        public ValueOut Vout { get; set; }
     }
 }
