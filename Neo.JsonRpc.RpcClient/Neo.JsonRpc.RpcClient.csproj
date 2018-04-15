@@ -13,15 +13,12 @@
     <RepositoryUrl>https://github.com/CityOfZion/Neo-RPC-SharpClient/</RepositoryUrl>
     <PackageTags>Neo JsonRpc RpcClient CityofZion Blockchain</PackageTags>
     <PackageReleaseNotes>Removed EdjCase.JsonRpc.Client from dependencies</PackageReleaseNotes>
-    <Version>1.0.1</Version>
+    <Version>1.0.8</Version>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Neo.JsonRpc.Client" Version="1.0.6" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Neo.JsonRpc.Client\Neo.JsonRpc.Client.csproj" />
   </ItemGroup>
 
 </Project>

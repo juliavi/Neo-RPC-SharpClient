@@ -1,5 +1,6 @@
 ﻿using Neo.JsonRpc.Client;
 using Neo.RPC.DTOs;
+using System;
 using System.Threading.Tasks;
 
 namespace Neo.RPC.Services
@@ -39,7 +40,15 @@ namespace Neo.RPC.Services
     ///    ]
     /// }
     /// </summary>
-    public class NeoListAddresses : RpcRequestResponseHandler<WalletAddress[]>
+    /// 
+
+    public interface INeoListAddressesRequest
+    {
+        Task<WalletAddress[]> SendRequestAsync(object id = null);
+    }
+
+
+    public class NeoListAddresses : RpcRequestResponseHandler<WalletAddress[]>, INeoListAddressesRequest
     {
         public NeoListAddresses(IClient client) : base(client, ApiMethods.listaddress.ToString())
         {
@@ -47,7 +56,7 @@ namespace Neo.RPC.Services
 
         public Task<WalletAddress[]> SendRequestAsync(object id = null)
         {
-            return base.SendRequestAsync(id);
+                return base.SendRequestAsync(id);
         }
     }
 }

@@ -60,7 +60,14 @@ namespace Neo.RPC.Services.Block
     ///   }
     /// }
     /// </Summary>
-    public class NeoGetBlock : RpcRequestResponseHandler<DTOs.Block>
+    /// 
+    public interface INeoGetBlockRequest
+    {
+        Task<DTOs.Block> SendRequestAsync(int blockIndex, object id = null);
+        Task<DTOs.Block> SendRequestAsync(string blockHash, object id = null);
+    }
+
+    public class NeoGetBlock : RpcRequestResponseHandler<DTOs.Block>, INeoGetBlockRequest
     {
         public NeoGetBlock(IClient client) : base(client, ApiMethods.getblock.ToString())
         {
@@ -68,8 +75,8 @@ namespace Neo.RPC.Services.Block
 
         public Task<DTOs.Block> SendRequestAsync(int blockIndex, object id = null)
         {
-            if (blockIndex < 0) throw new ArgumentOutOfRangeException(nameof(blockIndex));
-            return base.SendRequestAsync(id, blockIndex, 1);
+                if (blockIndex < 0) throw new ArgumentOutOfRangeException(nameof(blockIndex));
+                return SendRequestAsync(id, blockIndex, 1);
         }
 
         public RpcRequest BuildRequest(int blockIndex, object id = null)

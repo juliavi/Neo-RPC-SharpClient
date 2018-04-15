@@ -24,7 +24,12 @@ namespace Neo.RPC.Services.Account
     ///     "result": "AVHcdW3FGKbPWGHNhkPjgVgi4GGndiCxdo"
     /// }
     /// </summary>
-    public class NeoGetNewAddress : RpcRequestResponseHandler<string>
+    public interface INeoGetNewAddressRequest
+    {
+        Task<string> SendRequestAsync(object id = null);
+    }
+
+    public class NeoGetNewAddress : RpcRequestResponseHandler<string>, INeoGetNewAddressRequest
     {
         public NeoGetNewAddress(IClient client) : base(client, ApiMethods.getnewaddress.ToString())
         {

@@ -13,7 +13,7 @@ namespace Neo.RPC.Services
             GetBalance = new NeoGetBalance(client);
             ListAddresses = new NeoListAddresses(client);
         }
-       
+
         public NeoGetAccountState GetAccountState { get; private set; }
         public NeoValidateAddress ValidateAddress { get; private set; }
         public NeoGetNewAddress GetNewAddress { get; private set; }

@@ -30,6 +30,11 @@ namespace Neo.RPC.Services.Account
     ///     }
     /// }
     /// </summary>
+    public interface INeoValidateAddressRequest
+    {
+        Task<ValidateAddress> SendRequestAsync(string address, object id = null);
+    }
+
     public class NeoValidateAddress : RpcRequestResponseHandler<ValidateAddress>
     {
         public NeoValidateAddress(IClient client) : base(client, ApiMethods.validateaddress.ToString())

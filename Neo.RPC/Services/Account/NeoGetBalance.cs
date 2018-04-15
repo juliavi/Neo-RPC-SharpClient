@@ -36,7 +36,12 @@ namespace Neo.RPC.Services.Account
     /// }
     /// </summary>
     /// 
-    public class NeoGetBalance : RpcRequestResponseHandler<WalletBalance>
+    public interface INeoGetBalanceRequest
+    {
+        Task<WalletBalance> SendRequestAsync(string assetId, object id = null);
+    }
+
+    public class NeoGetBalance : RpcRequestResponseHandler<WalletBalance>, INeoGetBalanceRequest
     {
         public NeoGetBalance(IClient client) : base(client, ApiMethods.getbalance.ToString())
         {

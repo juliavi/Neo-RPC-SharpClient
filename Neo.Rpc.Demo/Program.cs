@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using Neo.JsonRpc.Client;
 using Neo.RPC;
@@ -10,7 +12,9 @@ namespace Neo.Rpc.Demo
 {
     public class Program
     {
-        private static readonly RpcClient _rpcClient = new RpcClient(new Uri("http://seed5.neo.org:10332"));
+        //10332 - main net port 
+        //20332 - test net http
+        private static readonly RpcClient _rpcClient = new RpcClient(new Uri("http://192.168.1.24:20332"));
 
         public static void Main(string[] args)
         {
@@ -24,9 +28,10 @@ namespace Neo.Rpc.Demo
 
                 var nep5ApiService = SetupNep5Service();
 
-                BlockApiTest(neoApiCompleteService).Wait();
 
-                TestNep5Service(nep5ApiService).Wait();
+                //BlockApiTest(neoApiCompleteService).Wait();
+
+                //TestNep5Service(nep5ApiService).Wait();
             }
             catch (Exception ex)
             {
@@ -59,15 +64,43 @@ namespace Neo.Rpc.Demo
         }
 
         // Block api demonstration
-        private static async Task BlockApiTest(NeoApiService service)
-        {
-            Block genesisBlock = await service.Blocks.GetBlock.SendRequestAsync(0); // Get genesis block by index (can pass a string with block hash as parameter too)
-            string bestBlockHash = await service.Blocks.GetBestBlockHash.SendRequestAsync();
-            int blockCount = await service.Blocks.GetBlockCount.SendRequestAsync();
-            string blockHash = await service.Blocks.GetBlockHash.SendRequestAsync(0);
-            string serializedBlock = await service.Blocks.GetBlockSerialized.SendRequestAsync(0); // (can pass a string with block hash as parameter too)
-            string blockFee = await service.Blocks.GetBlockSysFee.SendRequestAsync(0);
-        }
+        //private static async Task BlockApiTest(NeoApiService service)
+        //{
+            
+        //    }
+            
+
+            //var transaction = await service.Transactions.SendAssets.SendRequestAsync("c56f33fc6ecfcd0c225c4ab356fee59390af8560be0e930faebe74a6daff7c9b", "AeVCBqABbAwzdqp9e7LoYvEBf4rkphFvpc", -1);
+
+
+            //var addresses = await service.Accounts.ListAddresses.SendRequestAsync();
+
+
+
+
+            //WalletBalance balance = await service.Accounts.GetBalance.SendRequestAsync();
+
+            //wrap with access denied exception handling
+            //try
+            //{
+            //    string newAddress = await service.Accounts.GetNewAddress.SendRequestAsync();
+            //}
+            //catch (Exception ex)
+            //{
+
+            //}
+
+
+
+
+            //Block genesisBlock = await service.Blocks.GetBlock.SendRequestAsync(10200); // Get genesis block by index (can pass a string with block hash as parameter too)
+            //string bestBlockHash = await service.Blocks.GetBestBlockHash.SendRequestAsync();
+            //int blockCount = await service.Blocks.GetBlockCount.SendRequestAsync();
+            //string blockHash = await service.Blocks.GetBlockHash.SendRequestAsync(0);
+            //string serializedBlock = await service.Blocks.GetBlockSerialized.SendRequestAsync(0);
+            //string blockFee = await service.Blocks.GetBlockSysFee.SendRequestAsync(0);
+
+        //}
 
         // Nep5 api demonstration
         private static async Task TestNep5Service(NeoNep5Service nep5Service)

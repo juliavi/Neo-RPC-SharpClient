@@ -1,5 +1,6 @@
 ﻿using Neo.JsonRpc.Client;
 using Neo.RPC.Infrastructure;
+using System.Threading.Tasks;
 
 namespace Neo.RPC.Services.Block
 {
@@ -24,10 +25,22 @@ namespace Neo.RPC.Services.Block
     ///     "result": 991991
     ///     }
     /// </Summary>
-    public class NeoGetBlockCount : GenericRpcRequestResponseHandlerNoParam<int>
+    /// 
+
+    public interface INeoGetBlockCountRequest
+    {
+        Task<int> SendRequestAsync(object id = null);
+    }
+    
+    public class NeoGetBlockCount : GenericRpcRequestResponseHandlerNoParam<int>, INeoGetBlockCountRequest
     {
         public NeoGetBlockCount(IClient client) : base(client, ApiMethods.getblockcount.ToString())
         {
+        }
+
+        public Task<int> SendRequestAsync(object id = null)
+        {
+            return base.SendRequestAsync(id);
         }
     }
 }

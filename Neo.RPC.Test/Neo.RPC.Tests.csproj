@@ -9,6 +9,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
+    <PackageReference Include="Neo.JsonRpc.RpcClient" Version="1.0.7" />
+    <PackageReference Include="Neo.RPC" Version="1.0.14" />
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
   </ItemGroup>
@@ -17,11 +19,6 @@
     <None Update="test-settings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Neo.JsonRpc.RpcClient\Neo.JsonRpc.RpcClient.csproj" />
-    <ProjectReference Include="..\Neo.RPC\Neo.RPC.csproj" />
   </ItemGroup>
 
 </Project>

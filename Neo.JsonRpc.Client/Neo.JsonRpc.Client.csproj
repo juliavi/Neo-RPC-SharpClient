@@ -14,7 +14,7 @@
     <PackageReleaseNotes>Removed EdjCase.JsonRpc.Client from dependencies</PackageReleaseNotes>
     <Authors>Bruno Freitas</Authors>
     <Company>Bruno Freitas</Company>
-    <Version>1.0.1</Version>
+    <Version>1.0.6</Version>
   </PropertyGroup>
 
   <ItemGroup>
